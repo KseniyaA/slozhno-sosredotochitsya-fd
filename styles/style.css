@@ -1,5 +1,544 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы 
+  для разных цветовых тем. */
+  display: flex;
+  flex-direction: column;
+  inline-size: min-content;
+  block-size: min-content;
+  font-family: var(--main-font), sans-serif;
+  font-weight: 700;
+  position: relative;
+  margin: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25px 1fr 1fr 1fr 25px;
+  height: 668px;
+  position: relative;
+  background-image: var(--header-background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-position: center;
+}
+
+@media (width >= 768px) {
+  .header {
+    height: 1024px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    height: 768px;
+  }
+}
+
+.rec_element {
+  position: relative;
+  justify-self: end;
+  margin: 0;
+  margin-right: 38px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .rec_element {
+    margin-top: 20px;
+    margin-right: 48px;
+  }
+}
+
+@media (width >= 1024px) {
+  .rec_element {
+    margin-top: -6px;
+    margin-right: 51px;
+  }
+}
+
+.rec_element::after {
+  content: " ";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  margin-block-start: -1.5px;
+  background-image: url(../images/Ellipse.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-items: end;
+  align-self: center;
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    grid-row: 1 / 2;
+    justify-items: center;
+  }
+}
+
+.header__theme-menu-list {
+  list-style: none;
+  margin-block-start: 0.5em;
+  margin-inline-end: 0.5em;
+}
+
+@media ((width >= 768px) and (width < 1024px)) {
+  .header__theme-menu-list {
+    margin-block-start: 7.5em;
+    margin-inline-end: 1.1em;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    display: flex;
+    width: 254px;
+    margin-block-start: 3.5em;
+    column-gap: 15px;
+  }
+}
+
+.header__theme-menu-item {
+  margin-bottom: 10px;
+}
+
+.header__theme-menu-list li:last-child {
+  margin-bottom: 0;
+}
+
+.header__theme-menu-button {
+  background: transparent;
+  color: var(--menu-color);
+  font-family: inherit;
+  text-transform: lowercase;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  margin-right: 10px;
+  height: 26px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.no_focus {
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  line-height: 95.7px;
+  font-family: inherit;
+  color: var(--nofocus-text-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin: 10px 10px 10px 10px;
+}
+
+@media (width >= 768px) {
+  .no_focus {
+    align-self: center;
+    font-size: 120px;
+    line-height: 99px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .no_focus {
+    align-self: center;
+    font-size: 157px;
+    line-height: 129.53px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.title_decor {
+  font-family: var(--answer-text-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  border: 1px solid var(--main-background-color);
+  max-width: 364px;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (width >= 768px) {
+  .title_decor {
+    justify-self: end;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+}
+
+@media (width >= 1024px) {
+  .title_decor {
+    justify-self: end;
+    margin-right: 20px;
+    margin-top: 57px;
+    max-width: 48%;
+  }
+}
+
+.main_section {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--main-background-color);
+  padding-top: 40px;
+}
+
+@media (width >= 768px) {
+  .main_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+  }
+}
+
+.question_section {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (width >= 768px) {
+  .question_section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  .main_section .question_section:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 1024px) {
+  .question_section {
+    margin-right: 20px;
+  }
+
+  .main_section .question_section:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+}
+
+.question_section p:last-of-type {
+  margin-bottom: 50px;
+}
+
+@media (width >= 768px) {
+  .question_section p:last-of-type {
+    margin-bottom: 80px;
+  }
+}
+
+.question_text {
+  grid-row: span 2;
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 700;
+  font-family: var(--answer-text-font), sans-serif;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+@media (width >= 768px) and (width < 1024px) {
+  .question_text {
+    grid-column: 1;
+    margin-right: 10px;
+  }
+
+  .main_section .question_section:nth-child(2) .question_text {
+    width: calc(100%/4);
+  }
+}
+
+@media (width >= 1024px) {
+  .main_section .question_section:nth-child(2) .question_text {
+    grid-row: 1;
+    width: calc(100% / 3);
+  }
+}
+
+.answers {
+  /*margin-left: 10px;
+  margin-right: 10px;*/
+}
+ 
+@media (width >= 768px) and (width < 1024px) {
+  .question_section:nth-child(2) .answers {
+    margin-left: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .question_section:nth-child(2) .answers {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+
+.answer_short {
+  font-family: var(--answer-text-font), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  color: var(--answer-short-text-color);
+  background-color: var(--accent-color);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+@media (width >= 768px) and (width < 1024px) {
+  .question_section:nth-child(3) .answer_short:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .question_section:nth-child(3) .answer_short:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .question_section:nth-child(4) .answer_short {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+
+@media (width >= 1024px) {
+  .question_section:nth-child(2) .answer_short:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+  }
+
+  .question_section:nth-child(2) .answer_short:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+  }
+
+  .question_section:nth-child(2) .answer_short:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 2;
+  }
+}
+
+.advice {
+  font-family: var(--answer-text-font), sans-serif;
+  background-color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.advice .sub_answer_short {
+  font-weight: 700;
+}
+
+.sub_answer_short_5 {
+  margin-bottom: 20px;
+}
+
+.answer_full {
+  font-family: var(--answer-text-font), sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--answer-text-color);
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 23.4px
+}
+
+@media (width >= 768px) and (width < 1024px) {
+  .answer_full {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+@media (width >= 1024px) {
+  .question_section:nth-child(2) .answer_full:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+  }
+
+  .question_section:nth-child(2) .answer_full:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 2;
+  }
+
+  .question_section:nth-child(2) .answer_full:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 2;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-auto-flow: dense;
+  margin-bottom: 40px;
+}
+
+.gallery__item {
+  margin: 0;
+}
+
+.gallery__image {
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+
+@media (width >= 768px) {
+  .question_section:nth-child(4) .gallery {
+    grid-column: 1 / 4;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 192px 230px 318px;
+    gap: 20px;
+    box-sizing: border-box;
+    min-block-size: calc(100vh - 5em);
+    grid-auto-flow: dense;
+    margin-bottom: 60px;
+  }
+
+
+  .gallery__item {
+    box-sizing: border-box;
+    min-block-size: 4.3em;
+    margin: 0;
+  }
+  
+  .gallery__image {
+    inline-size: 100%;
+    block-size: 100%;
+    max-block-size: 100%;
+    object-fit: cover;
+  }
+
+  .gallery__item:nth-child(5) {
+    grid-column: 2 / -1;
+    grid-row: 3;
+  }
+
+  .gallery__item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2 / -1;
+  }
+
+  .gallery__item:nth-child(2) {
+    grid-column: 3;
+    grid-row: span 2;
+  }
+
+  .gallery__item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+}
+
+@media (width >= 768px) {
+  .gallery {
+    grid-template-rows: 260px 315px 433px;
+  }
+}
+
+.footer {
+  display: grid;
+  background-color: var(--main-background-color);
+  height: 668px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25px 1fr 25px;
+}
+
+@media (width >= 768px) {
+  .footer {
+    height: 1024px;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer {
+    height: 768px;
+  }
+}
+
+.focus {
+  margin: auto;
+  font-family: var(--main-font);
+  color: var(--nofocus-text-color);
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--shadow-accent-color);
+}
+
+.top_corner {
+  position: relative;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  justify-self: right;
+  margin: 10px 10px 0 0;
+}
+
+@media (width >= 768px) {
+  .top_corner {
+    margin: 20px 20px 0 0;
+  }
+}
+
+.bottom_corner {
+  position: relative;
+  inline-size: 25px;
+  block-size: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  justify-self: left;
+  margin: -10px 0 0 10px;
+}
+
+@media (width >= 768px) {
+  .bottom_corner {
+    margin: -20px 0 0 20px;
+  }
 }

@@ -9,8 +9,22 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --nofocus-text-color: #FFC2E6;
+  --header-background-image: url(../images/cover-image-light.png);
+  --title-text-color: #353430;
+  --accent-color: #FF8DCB;
+  --menu-color: #353430;
+  --shadow-accent-color: #FF8DCB;
+  --main-background-color: #FFF1F7;
+  --answer-text-color: #353430;
+  --answer-short-text-color: #353430;
+  
 }
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+}
+
+.rec_element {
+  
 }
