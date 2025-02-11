@@ -18,7 +18,7 @@
   --main-background-color: #FFF1F7;
   --answer-text-color: #353430;
   --answer-short-text-color: #353430;
-  
+  --question_text-color: #353430;
 }
 
 .theme-light .page {
@@ -26,5 +26,5 @@
 }
 
 .rec_element {
-  
+  display: none;
 }
