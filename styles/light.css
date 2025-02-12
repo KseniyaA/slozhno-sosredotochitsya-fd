@@ -26,8 +26,15 @@
 }
 
 
-/*
-.rec_element {
+.theme-light .rec_element {
   display: none;
 }
-  */
+
+
+.theme-light li {
+  outline: none;
+}
+    
+.theme-light li:nth-child(1) {
+  outline: 1px solid var(--accent-color);
+}
