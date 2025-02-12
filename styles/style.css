@@ -432,6 +432,7 @@
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 142px 355px 237px 355px 237px;
   gap: 10px;
   grid-auto-flow: dense;
   margin-bottom: 40px;
