@@ -6,10 +6,10 @@
   flex-direction: column;
   inline-size: min-content;
   block-size: min-content;
-  font-family: var(--main-font), sans-serif;
-  font-weight: 700;
   position: relative;
   margin: 0;
+  font-family: var(--main-font), sans-serif;
+  font-weight: 700;
   background-image: var(--header-background-image);
   background-size: cover;
   background-attachment: fixed;
@@ -23,7 +23,7 @@
   grid-template-rows: 46px 1fr 1fr 1fr 45px;
   height: 668px;
   position: relative;
-  width: 100vw;  
+  width: 100vw;
 }
 
 @media (width >= 768px) {
@@ -44,14 +44,14 @@
   position: relative;
   margin: 0;
   margin-right: 38px;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
-  font-family: inherit;
   color: var(--accent-color);
   grid-column: 3;
   grid-row: 1;
-  align-self: center; 
-  justify-self: end; 
+  align-self: center;
+  justify-self: end;
 }
 
 @media (width >= 768px) {
@@ -161,9 +161,9 @@
   background: transparent;
   color: var(--menu-color);
   font-family: inherit;
-  text-transform: lowercase;
   font-size: 18px;
   font-weight: 400;
+  text-transform: lowercase;
   border: none;
   height: 26px;
   padding-left: 13px;
@@ -171,9 +171,9 @@
 }
 
 .no_focus {
+  font-family: inherit;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 95.7px;
-  font-family: inherit;
   color: var(--nofocus-text-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   margin: 10px 10px 10px 10px;
@@ -185,8 +185,8 @@
   .no_focus {
     align-self: center;
     font-size: 120px;
-    line-height: 99px;
     font-weight: 700;
+    line-height: 99px;
     margin: 0;
     grid-row: 3;
     grid-column: 1 / -1;
@@ -197,8 +197,8 @@
   .no_focus {
     align-self: center;
     font-size: 157px;
-    line-height: 129.53px;
     font-weight: 700;
+    line-height: 129.53px;
     margin: 0;
     grid-row: 3;
     grid-column: 1 / -1;
@@ -208,8 +208,8 @@
 .title_decor {
   font-family: var(--answer-text-font);
   font-size: 18px;
-  line-height: 23.4px;
   font-weight: 700;
+  line-height: 23.4px;
   background-color: var(--accent-color);
   color: var(--title-text-color);
   border: 1px solid var(--main-background-color);
@@ -353,11 +353,11 @@
 }
 
 .question_text {
-  color: var(--question_text-color);
-  font-size: 18px;
-  line-height: 23.4px;
-  font-weight: 700;
   font-family: var(--answer-text-font), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--question_text-color);
+  line-height: 23.4px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -423,9 +423,9 @@
 
 .advice {
   font-family: var(--answer-text-font), sans-serif;
-  background-color: var(--accent-color);
   font-size: 18px;
   font-weight: 400;
+  background-color: var(--accent-color);
   line-height: 23.4px;
   margin: 20px 0 10px 0;
 }
@@ -535,9 +535,9 @@
 .focus {
   margin: auto;
   font-family: var(--main-font);
-  color: var(--nofocus-text-color);
   font-size: 116px;
   font-weight: 700;
+  color: var(--nofocus-text-color);
   line-height: 95.7px;
   text-shadow: 4px 4px 0 var(--shadow-accent-color);
   grid-row: 2;
