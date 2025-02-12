@@ -25,11 +25,9 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-
 .theme-light .rec_element {
   display: none;
 }
-
 
 .theme-light li {
   outline: none;
@@ -37,4 +35,30 @@
     
 .theme-light li:nth-child(1) {
   outline: 1px solid var(--accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --nofocus-text-color: #FFC2E6;
+    --header-background-image: url(../images/cover-image-light.png);
+    --title-text-color: #353430;
+    --accent-color: #FF8DCB;
+    --menu-color: #353430;
+    --shadow-accent-color: #FF8DCB;
+    --main-background-color: #FFF1F7;
+    --answer-text-color: #353430;
+    --answer-short-text-color: #353430;
+    --question_text-color: #353430;
+  }  
+  .theme-auto .rec_element {
+    display: none;
+  }
+
+  .theme-auto li {
+    outline: none;
+  }
+      
+  .theme-auto li:nth-child(2) {
+    outline: 1px solid var(--accent-color);
+  }
 }
