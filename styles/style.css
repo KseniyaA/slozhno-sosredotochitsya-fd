@@ -416,11 +416,7 @@
 
 .linka:focus {
   outline: 1px solid var(--answer-text-color);
-  color: var(--answer-text-color);
-}
-
-.linka:focus-visible {
-  outline: 1px solid var(--answer-text-color);
+  border: 1px solid transparent;
   color: var(--answer-text-color);
 }
 
