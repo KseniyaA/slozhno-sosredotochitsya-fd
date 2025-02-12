@@ -10,6 +10,7 @@
   margin: 0;
   font-family: var(--main-font), sans-serif;
   font-weight: 700;
+  background-color: var(--main-background-color);
   background-image: var(--header-background-image);
   background-size: cover;
   background-attachment: fixed;
@@ -244,7 +245,6 @@
 .main_section {
   display: flex;
   flex-direction: column;
-  background-color: var(--main-background-color);
   width: 100vw;
   box-sizing: border-box;
   row-gap: 50px;
@@ -485,7 +485,6 @@
 
 .footer {
   display: grid;
-  background-color: var(--main-background-color);
   height: 668px;
   grid-template-columns: 1fr;
   grid-template-rows: 38px 1fr 38px;
