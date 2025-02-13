@@ -210,7 +210,7 @@
 }
 
 .title_decor {
-  font-family: var(--answer-text-font);
+  font-family: var(--answer-text-font), sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -533,7 +533,7 @@
 
 .focus {
   margin: auto;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 116px;
   font-weight: 700;
   color: var(--nofocus-text-color);
