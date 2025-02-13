@@ -29,6 +29,10 @@
   display: none;
 }
 
+.theme-light .rec_element::after {
+  display: none;
+}
+
 .theme-light li {
   outline: none;
 }
@@ -50,15 +54,20 @@
     --answer-short-text-color: #353430;
     --question_text-color: #353430;
   }  
+  
   .rec_element {
     display: none;
   }
+
+  .rec_element .rec_element::after {
+    display: none;
+  } 
 
   li {
     outline: none;
   }
       
-  li:nth-child(2) {
+  .theme-auto li:nth-child(2) {
     outline: 1px solid var(--accent-color);
   }
 }

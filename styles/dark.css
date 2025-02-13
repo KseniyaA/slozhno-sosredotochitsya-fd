@@ -55,7 +55,7 @@
     outline: none;
   }
 
-  li:nth-child(2) {
+  .theme-auto li:nth-child(2) {
     outline: 1px solid var(--accent-color);
   }
 }
