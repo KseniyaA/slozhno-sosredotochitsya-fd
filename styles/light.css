@@ -50,15 +50,15 @@
     --answer-short-text-color: #353430;
     --question_text-color: #353430;
   }  
-  .theme-auto .rec_element {
+  /*.theme-auto */.rec_element {
     display: none;
   }
 
-  .theme-auto li {
+  /*.theme-auto */li {
     outline: none;
   }
       
-  .theme-auto li:nth-child(2) {
+  /*.theme-auto */li:nth-child(2) {
     outline: 1px solid var(--accent-color);
   }
 }

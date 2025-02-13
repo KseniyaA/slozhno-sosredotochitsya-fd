@@ -34,7 +34,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme-auto {
+  :root/*.theme-auto*/ {
     /* сохраните этот селектор в приведённом виде.
       Так стили написанные ниже будут иметь больший вес,
       чем стили в медиазапросе предпочтений пользователя
@@ -51,11 +51,11 @@
     --question_text-color: #FF0070;
   } 
 
-  .theme-auto .theme-dark li {
+  /*.theme-auto *//*.theme-dark*/ li {
     outline: none;
   }
 
-  .theme-auto li:nth-child(2) {
+  /*.theme-auto */li:nth-child(2) {
     outline: 1px solid var(--accent-color);
   }
 }
