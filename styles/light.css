@@ -38,7 +38,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-auto {
+  :root {
     --nofocus-text-color: #FFC2E6;
     --header-background-image: url(../images/cover-image-light.png);
     --title-text-color: #353430;
@@ -50,15 +50,15 @@
     --answer-short-text-color: #353430;
     --question_text-color: #353430;
   }  
-  /*.theme-auto */.rec_element {
+  .rec_element {
     display: none;
   }
 
-  /*.theme-auto */li {
+  li {
     outline: none;
   }
       
-  /*.theme-auto */li:nth-child(2) {
+  li:nth-child(2) {
     outline: 1px solid var(--accent-color);
   }
 }
