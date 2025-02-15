@@ -8,7 +8,7 @@
   block-size: min-content;
   position: relative;
   margin: 0;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   background-color: var(--main-background-color);
   background-image: var(--header-background-image);
@@ -54,7 +54,7 @@
   content: "";
   inline-size: 25px;
   block-size: 25px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--corner-color);
 }
 
 .decorated-zone::before {
@@ -191,7 +191,7 @@
 }
 
 .title_decor {
-  font-family: var(--answer-text-font), sans-serif;
+  font-family: var(--answer-text-font), monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -322,7 +322,7 @@
 }
 
 .question_text {
-  font-family: var(--answer-text-font), sans-serif;
+  font-family: var(--answer-text-font), monospace;
   font-size: 18px;
   font-weight: 700;
   color: var(--question-text-color);
@@ -339,7 +339,7 @@
 }
 
 .answers {
-  font-family: var(--answer-text-font), sans-serif;
+  font-family: var(--answer-text-font), monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -393,7 +393,7 @@
 }
 
 .advice {
-  font-family: var(--answer-text-font), sans-serif;
+  font-family: var(--answer-text-font), monospace;
   font-size: 18px;
   font-weight: 400;
   background-color: var(--accent-color);

@@ -53,9 +53,14 @@
     --answer-text-color: #353430;
     --answer-short-text-color: #353430;
     --question-text-color: #353430;
+    --corner-color: #353430;
   }  
   
-  .rec_element {
+  .theme-light .rec_element {
+    display: none;
+  }
+
+  .theme-auto .rec_element {
     display: none;
   }
 
