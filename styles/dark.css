@@ -30,10 +30,6 @@
   outline: none;
 }
 
-.theme-dark li:nth-child(3) {
-  outline: 1px solid var(--accent-color);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     /* сохраните этот селектор в приведённом виде.
@@ -50,13 +46,10 @@
     --answer-text-color: #F1B2CE;
     --answer-short-text-color: #000028;
     --question-text-color: #FF0070;
+    --corner-color: #FF0070;  
   } 
 
   li {
     outline: none;
-  }
-
-  .theme-auto li:nth-child(2) {
-    outline: 1px solid var(--accent-color);
   }
 }

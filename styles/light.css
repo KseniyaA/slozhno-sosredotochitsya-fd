@@ -19,6 +19,7 @@
   --answer-text-color: #353430;
   --answer-short-text-color: #353430;
   --question-text-color: #353430;
+  --corner-color: #353430;
 }
 
 .theme-light .page {
@@ -35,10 +36,6 @@
 
 .theme-light li {
   outline: none;
-}
-    
-.theme-light li:nth-child(1) {
-  outline: 1px solid var(--accent-color);
 }
 
 @media (prefers-color-scheme: light) {
@@ -70,9 +67,5 @@
 
   li {
     outline: none;
-  }
-      
-  .theme-auto li:nth-child(2) {
-    outline: 1px solid var(--accent-color);
   }
 }

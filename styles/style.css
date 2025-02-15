@@ -109,13 +109,13 @@
 .rec_element::after {
   content: " ";
   position: absolute;
-  inline-size: 20px;
-  block-size: 20px;
-  background-image: url(../images/Ellipse.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  margin-left: 5px;
+  top: 10px;
+  left: 45px;
+  border-radius: 50%;
+  inline-size: 8px;
+  block-size: 8px;
+  background: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .header__theme-menu {
@@ -160,6 +160,14 @@
   height: 26px;
   padding-left: 13px;
   padding-right: 13px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-color);
 }
 
 .title_short {
