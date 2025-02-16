@@ -163,10 +163,21 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--menu-color);
+  opacity: 0.4;
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  text-decoration: underline;
 }
 
 .title_short {
@@ -384,22 +395,22 @@
   margin-bottom: 0;
 }
 
-.linka {
+.text_link {
   text-decoration: none;
   color: inherit;
   text-shadow: 2px 2px 0 var(--shadow-accent-color);
 }
 
-.linka:hover {
+.text_link:hover {
   text-decoration: underline;
 }
 
-.linka:focus {
+.text_link:focus {
   outline: none;
   border: none;
 }
 
-.linka:focus-visible {
+.text_link:focus-visible {
   outline: 1px solid var(--answer-text-color);
   border: 1px solid transparent;
   color: var(--answer-text-color);
