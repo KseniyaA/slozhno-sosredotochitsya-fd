@@ -7,7 +7,7 @@
   inline-size: min-content;
   block-size: min-content;
   position: relative;
-  margin: 0;
+  /*margin: 0;*/
   font-family: var(--main-font), monospace;
   font-weight: 700;
   background-color: var(--main-background-color);
@@ -162,8 +162,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--menu-color);
-  opacity: 0.4;
+  outline: 1px solid var(--menu-color-rgb);
 }
 
 .header__theme-menu-button_active {
@@ -402,7 +401,7 @@
 }
 
 .text_link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--menu-color);
 }
 
 .text_link:focus {
