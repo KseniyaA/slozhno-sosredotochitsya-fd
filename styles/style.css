@@ -4,10 +4,8 @@
   для разных цветовых тем. */
   display: flex;
   flex-direction: column;
-  inline-size: min-content;
   block-size: min-content;
   position: relative;
-  /*margin: 0;*/
   font-family: var(--main-font), monospace;
   font-weight: 700;
   background-color: var(--main-background-color);
@@ -228,7 +226,6 @@
 .main_section {
   display: flex;
   flex-direction: column;
-  width: 100vw;
   box-sizing: border-box;
   row-gap: 50px;
   padding: 40px 10px 0 10px;
@@ -319,7 +316,7 @@
     grid-row: 2;
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     column-gap: 20px;
   }
 
